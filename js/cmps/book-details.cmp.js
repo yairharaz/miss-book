@@ -1,5 +1,5 @@
 import { bookService } from "../services/book.service.js";
-import reviewAdd from './review-add.cmp.js'
+import bookReview from './book-review.cmp.js'
 export default{
   template: `
         <section class="book-details" v-if="book">
@@ -11,8 +11,15 @@ export default{
             <span><h4>{{getTimeOfPublish}}</h4></span>
             <span><img v-if="isOnSale" src="./icons/sale.png"></span>
             </div>
-            <pre>{{book}}</pre>
-            <reviewAdd></reviewAdd>
+            Title:
+            <h1>{{book.title}}</h1>
+            Subtitle:
+            <h3 class="sub">{{book.subtitle}}</h3>
+            Author:
+            <h4>{{book.authors[0]}}<span v-if="authors">et al.</span></h4>
+            Description:
+            <p class="desc">{{book.description}}</p>
+            <book-review :book="book"></book-review>
         </section>        
     `,
   data() {
@@ -57,6 +64,9 @@ export default{
     },
     isOnSale(){
       return this.book.listPrice.isOnSale;
+    },
+    authors(){
+      return this.book.authors.length > 1;
     }
   },
   methods: {
@@ -65,7 +75,7 @@ export default{
   }
   },
   components:{
-    reviewAdd
+    bookReview
   },
   created(){
     const {bookId} = this.$route.params;

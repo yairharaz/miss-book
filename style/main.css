@@ -63,3 +63,16 @@ main {
     margin-inline-end: 20px;
     width: 30%;
 }
+
+.review-form{
+    width: 90%;
+   padding-left: 5px;
+}
+
+.book-details .desc{
+    max-width: 400px;
+}
+
+.book-details .sub{
+    max-width: 400px;
+}
