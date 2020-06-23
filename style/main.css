@@ -1,0 +1,65 @@
+@import 'helpers.css';
+/* @import './layout.css'; */
+
+ul {
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    margin-inline-start: 20px;
+}
+
+.red {
+    color: red;
+    padding-left: 10px;
+}
+
+.green {
+    color: green;
+    padding-left: 10px;
+}
+
+img {
+    width: 40px;
+}
+
+.book-preview h3{
+    margin: 0;
+}
+
+.book-details span{
+    margin-inline-start: 40px;
+}
+
+.book-details{
+    padding: 10px;
+}
+.book-preview {
+    font-size: 1.2rem;
+    padding: 5px;
+    padding-top: 10px;
+    border: 3px solid black;
+    height: 170px;
+    width: 120px;
+    margin-bottom: 20px;
+    background-color: blanchedalmond;
+}
+
+.book-preview:hover {
+    cursor: pointer;
+}
+
+.book-preview pre{
+    font-family: fantasy;
+    font-size: 0.8rem;
+}
+
+main {
+    background-color: #fff;
+}
+
+.app-header nav{
+    margin-inline-end: 20px;
+    width: 30%;
+}
